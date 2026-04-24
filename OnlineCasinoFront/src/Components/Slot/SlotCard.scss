@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&display=swap");
+
+$gold: #c9a84c;
+$gold-bright: #f0c96a;
+$gold-dim: #7a5e20;
+$text-primary: #e8dfc8;
+$text-muted: #7a8fa8;
+
+.slot-card {
+  position: relative;
+  background: linear-gradient(160deg, rgba(4, 21, 48, 0.97) 0%, rgba(2, 11, 26, 0.99) 100%);
+  border: 1px solid rgba(201, 168, 76, 0.18);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.28s ease,
+              box-shadow 0.28s ease;
+
+  box-shadow:
+    0 0 0 1px rgba(201, 168, 76, 0.05),
+    0 8px 32px rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    transform: translateY(-6px) scale(1.01);
+    border-color: rgba(201, 168, 76, 0.45);
+    box-shadow:
+      0 0 0 1px rgba(201, 168, 76, 0.12),
+      0 16px 48px rgba(0, 0, 0, 0.65),
+      0 0 40px rgba(201, 168, 76, 0.1);
+
+    .slot-card__image {
+      transform: scale(1.06);
+    }
+
+    .slot-card__image-overlay {
+      opacity: 0.5;
+    }
+
+    .slot-card__play-btn {
+      background-position: 0% 0;
+      box-shadow: 0 4px 24px rgba(201, 168, 76, 0.5), 0 0 48px rgba(201, 168, 76, 0.15);
+    }
+
+    .slot-card__corner {
+      opacity: 1;
+    }
+  }
+}
+
+
+.slot-card__badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+
+  &--new {
+    background: rgba(26, 111, 212, 0.85);
+    color: #a8d4ff;
+    border: 1px solid rgba(26, 111, 212, 0.5);
+  }
+
+  &--hot {
+    background: rgba(200, 60, 40, 0.85);
+    color: #ffb8a8;
+    border: 1px solid rgba(200, 60, 40, 0.5);
+  }
+}
+
+
+.slot-card__image-wrap {
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slot-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slot-card__image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(2, 11, 26, 0.9) 100%
+  );
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+
+.slot-card__body {
+  padding: 16px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.slot-card__name {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.06em;
+  color: $gold-bright;
+  margin: 0;
+  text-shadow: 0 0 18px rgba(201, 168, 76, 0.25);
+  line-height: 1;
+}
+
+.slot-card__desc {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: $text-muted;
+  margin: 0;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+}
+
+
+.slot-card__play-btn {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #000;
+  background: linear-gradient(135deg, $gold 0%, $gold-bright 50%, $gold 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 3px 14px rgba(201, 168, 76, 0.25);
+  transition: background-position 0.4s ease, box-shadow 0.25s ease, transform 0.15s ease;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.slot-card__play-icon {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+
+.slot-card__corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+
+  &--tl {
+    top: 8px;
+    left: 8px;
+    border-top: 2px solid $gold;
+    border-left: 2px solid $gold;
+    border-radius: 2px 0 0 0;
+  }
+
+  &--br {
+    bottom: 8px;
+    right: 8px;
+    border-bottom: 2px solid $gold;
+    border-right: 2px solid $gold;
+    border-radius: 0 0 2px 0;
+  }
+}

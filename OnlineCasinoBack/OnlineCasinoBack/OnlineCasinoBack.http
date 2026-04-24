@@ -1,0 +1,6 @@
+@OnlineCasinoBack_HostAddress = http://localhost:5071
+
+GET {{OnlineCasinoBack_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

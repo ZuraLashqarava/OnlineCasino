@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_T6ULI6D_SQLEXPRESS/OnlineCasino/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|c:\\users\\user\\source\\repos\\onlinecasinoback\\onlinecasinoback\\service\\slotservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|solutionrelative:onlinecasinoback\\service\\slotservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|c:\\users\\user\\source\\repos\\onlinecasinoback\\onlinecasinoback\\abstractions\\slotabstractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|solutionrelative:onlinecasinoback\\abstractions\\slotabstractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|c:\\users\\user\\source\\repos\\onlinecasinoback\\onlinecasinoback\\service\\slotengineregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|solutionrelative:onlinecasinoback\\service\\slotengineregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|c:\\users\\user\\source\\repos\\onlinecasinoback\\onlinecasinoback\\models\\slot\\slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|solutionrelative:onlinecasinoback\\models\\slot\\slot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|c:\\users\\user\\source\\repos\\onlinecasinoback\\onlinecasinoback\\models\\slot\\islotengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|solutionrelative:onlinecasinoback\\models\\slot\\islotengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|c:\\users\\user\\source\\repos\\onlinecasinoback\\onlinecasinoback\\models\\slot\\slot1\\spin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|solutionrelative:onlinecasinoback\\models\\slot\\slot1\\spin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|c:\\users\\user\\source\\repos\\onlinecasinoback\\onlinecasinoback\\controllers\\slotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|solutionrelative:onlinecasinoback\\controllers\\slotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|c:\\users\\user\\source\\repos\\onlinecasinoback\\onlinecasinoback\\models\\slot\\slot1\\playline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|solutionrelative:onlinecasinoback\\models\\slot\\slot1\\playline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|c:\\users\\user\\source\\repos\\onlinecasinoback\\onlinecasinoback\\dtos\\winlinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|solutionrelative:onlinecasinoback\\dtos\\winlinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|c:\\users\\user\\source\\repos\\onlinecasinoback\\onlinecasinoback\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|solutionrelative:onlinecasinoback\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|c:\\users\\user\\source\\repos\\onlinecasinoback\\onlinecasinoback\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{670818F2-8187-4C40-BDA4-C7C23E1497C6}|OnlineCasinoBack\\OnlineCasinoBack.csproj|solutionrelative:onlinecasinoback\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "dbo.Users [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_T6ULI6D_SQLEXPRESS/OnlineCasino/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-04-21T11:59:18.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SlotAbstractions.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\Abstractions\\SlotAbstractions.cs",
+              "RelativeDocumentMoniker": "OnlineCasinoBack\\Abstractions\\SlotAbstractions.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\Abstractions\\SlotAbstractions.cs",
+              "RelativeToolTip": "OnlineCasinoBack\\Abstractions\\SlotAbstractions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T09:06:16.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SlotEngineRegistry.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\Service\\SlotEngineRegistry.cs",
+              "RelativeDocumentMoniker": "OnlineCasinoBack\\Service\\SlotEngineRegistry.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\Service\\SlotEngineRegistry.cs",
+              "RelativeToolTip": "OnlineCasinoBack\\Service\\SlotEngineRegistry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T09:06:13.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Slot.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\Models\\Slot\\Slot.cs",
+              "RelativeDocumentMoniker": "OnlineCasinoBack\\Models\\Slot\\Slot.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\Models\\Slot\\Slot.cs",
+              "RelativeToolTip": "OnlineCasinoBack\\Models\\Slot\\Slot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T09:06:10.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ISlotEngine.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\Models\\Slot\\ISlotEngine.cs",
+              "RelativeDocumentMoniker": "OnlineCasinoBack\\Models\\Slot\\ISlotEngine.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\Models\\Slot\\ISlotEngine.cs",
+              "RelativeToolTip": "OnlineCasinoBack\\Models\\Slot\\ISlotEngine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T09:06:08.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SlotService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\Service\\SlotService.cs",
+              "RelativeDocumentMoniker": "OnlineCasinoBack\\Service\\SlotService.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\Service\\SlotService.cs",
+              "RelativeToolTip": "OnlineCasinoBack\\Service\\SlotService.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAIwJ8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T08:26:22.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SlotController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\Controllers\\SlotController.cs",
+              "RelativeDocumentMoniker": "OnlineCasinoBack\\Controllers\\SlotController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\Controllers\\SlotController.cs",
+              "RelativeToolTip": "OnlineCasinoBack\\Controllers\\SlotController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAwwEgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T08:26:08.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Playline.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\Models\\Slot\\Slot1\\Playline.cs",
+              "RelativeDocumentMoniker": "OnlineCasinoBack\\Models\\Slot\\Slot1\\Playline.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\Models\\Slot\\Slot1\\Playline.cs",
+              "RelativeToolTip": "OnlineCasinoBack\\Models\\Slot\\Slot1\\Playline.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T08:26:00.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Spin.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\Models\\Slot\\Slot1\\Spin.cs",
+              "RelativeDocumentMoniker": "OnlineCasinoBack\\Models\\Slot\\Slot1\\Spin.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\Models\\Slot\\Slot1\\Spin.cs",
+              "RelativeToolTip": "OnlineCasinoBack\\Models\\Slot\\Slot1\\Spin.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T10:09:07.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WinLineDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\DTOS\\WinLineDto.cs",
+              "RelativeDocumentMoniker": "OnlineCasinoBack\\DTOS\\WinLineDto.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\DTOS\\WinLineDto.cs",
+              "RelativeToolTip": "OnlineCasinoBack\\DTOS\\WinLineDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T11:04:53.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "OnlineCasinoBack\\Data\\DataContext.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\Data\\DataContext.cs",
+              "RelativeToolTip": "OnlineCasinoBack\\Data\\DataContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T11:13:40.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\DTOS\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "OnlineCasinoBack\\DTOS\\RegisterDto.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\OnlineCasinoBack\\OnlineCasinoBack\\DTOS\\RegisterDto.cs",
+              "RelativeToolTip": "OnlineCasinoBack\\DTOS\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T14:07:46.996Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

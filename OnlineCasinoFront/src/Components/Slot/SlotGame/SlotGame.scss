@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&display=swap");
+
+$grad-bg:       linear-gradient(105deg, #000000 0%, #020b1a 45%, #041530 70%, #000d20 100%);
+$gold:          #c9a84c;
+$gold-bright:   #f0c96a;
+$gold-dim:      #7a5e20;
+$text-primary:  #e8dfc8;
+$text-muted:    #7a8fa8;
+$border-subtle: rgba(201, 168, 76, 0.15);
+$border-input:  rgba(201, 168, 76, 0.2);
+$input-bg:      rgba(255, 255, 255, 0.03);
+$error-color:   #e05252;
+$win-color:     #4caf82;
+
+.slot-game {
+  min-height: 100vh;
+  width: 100%;
+  background: $grad-bg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 16px 60px;
+  box-sizing: border-box;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.006) 2px,
+      rgba(255, 255, 255, 0.006) 4px
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+.slot-game__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 780px;
+  background: linear-gradient(160deg, rgba(4, 21, 48, 0.95) 0%, rgba(2, 11, 26, 0.98) 100%);
+  border: 1px solid $border-subtle;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  box-shadow:
+    0 0 0 1px rgba(201, 168, 76, 0.06),
+    0 24px 64px rgba(0, 0, 0, 0.7),
+    0 0 80px rgba(26, 111, 212, 0.06);
+  padding-bottom: 32px;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      $gold-dim 20%,
+      $gold 50%,
+      $gold-dim 80%,
+      transparent 100%
+    );
+    opacity: 0.7;
+    z-index: 2;
+  }
+}
+
+.slot-game__topbar {
+  width: 100%;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  padding: 22px 32px 20px;
+  border-bottom: 1px solid $border-subtle;
+  box-sizing: border-box;
+}
+
+.slot-game__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+
+  &--win {
+    animation: winPulse 0.6s ease;
+  }
+}
+
+@keyframes winPulse {
+  0%, 100% { transform: scale(1);    }
+  50%       { transform: scale(1.12); }
+}
+
+.slot-game__stat-label {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+.slot-game__stat-value {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 26px;
+  letter-spacing: 0.04em;
+  color: $text-primary;
+
+  &--gold { color: $gold-bright; }
+  &--win  { color: $win-color; text-shadow: 0 0 16px rgba(76, 175, 130, 0.5); }
+}
+
+.slot-game__canvas-wrap {
+  width: 100%;
+  height: 520px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid $border-subtle;
+
+  canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.slot-game__spin-overlay {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.slot-game__spinning-text {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.2em;
+  color: $gold;
+  opacity: 0.7;
+  animation: blinkFade 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes blinkFade {
+  from { opacity: 0.4; }
+  to   { opacity: 0.9; }
+}
+
+.slot-game__controls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 32px 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.slot-game__controls-label {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $text-muted;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.slot-game__bet-wrap {
+  flex: 1;
+}
+
+.slot-game__bet-steps {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.slot-game__bet-step {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: $text-muted;
+  background: $input-bg;
+  border: 1px solid $border-input;
+  border-radius: 6px;
+  padding: 7px 12px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+
+  &:hover:not(:disabled):not(.slot-game__bet-step--active) {
+    color: $text-primary;
+    border-color: rgba(201, 168, 76, 0.4);
+    background: rgba(201, 168, 76, 0.04);
+  }
+
+  &--active {
+    color: $gold-bright;
+    border-color: $gold;
+    background: rgba(201, 168, 76, 0.08);
+    box-shadow: 0 0 10px rgba(201, 168, 76, 0.15);
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.slot-game__spin-btn {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #000;
+  background: linear-gradient(135deg, $gold 0%, $gold-bright 50%, $gold 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 20px rgba(201, 168, 76, 0.25);
+  transition: background-position 0.4s ease, box-shadow 0.25s ease, transform 0.15s ease;
+  min-width: 140px;
+  justify-content: center;
+
+  &:hover:not(:disabled) {
+    background-position: 0% 0;
+    box-shadow: 0 4px 28px rgba(201, 168, 76, 0.45), 0 0 48px rgba(201, 168, 76, 0.15);
+    transform: translateY(-1px);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 12px rgba(201, 168, 76, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  &--spinning {
+    background-position: 0% 0;
+    pointer-events: none;
+  }
+}
+
+.slot-game__spin-icon {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.slot-game__spinner {
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid rgba(0, 0, 0, 0.3);
+  border-top-color: rgba(0, 0, 0, 0.9);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.slot-game__error {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: $error-color;
+  background: rgba(224, 82, 82, 0.08);
+  border: 1px solid rgba(224, 82, 82, 0.2);
+  border-radius: 6px;
+  padding: 10px 16px;
+  width: calc(100% - 64px);
+  box-sizing: border-box;
+  text-align: center;
+  margin: 12px 32px 0;
+  letter-spacing: 0.03em;
+}
+
+.slot-game__win-banner {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: $win-color;
+  background: rgba(76, 175, 130, 0.08);
+  border: 1px solid rgba(76, 175, 130, 0.25);
+  border-radius: 8px;
+  padding: 12px 20px;
+  width: calc(100% - 64px);
+  box-sizing: border-box;
+  text-align: center;
+  animation: slideDown 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.04em;
+  margin: 12px 32px 0;
+
+  strong {
+    color: $gold-bright;
+    font-size: 17px;
+  }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@media (max-width: 600px) {
+  .slot-game {
+    padding: 0 0 40px;
+  }
+
+  .slot-game__inner {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .slot-game__canvas-wrap {
+    height: 380px;
+  }
+
+  .slot-game__controls {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px 20px 0;
+  }
+
+  .slot-game__spin-btn {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .slot-game__topbar {
+    gap: 20px;
+    padding: 18px 20px 16px;
+  }
+
+  .slot-game__error,
+  .slot-game__win-banner {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}

@@ -1,0 +1,132 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using OnlineCasinoBack.Data;
+using OnlineCasinoBack.Models.Slot;
+using OnlineCasinoBack.Models.Slot.Slot1;
+using OnlineCasinoBack.Security;
+using OnlineCasinoBack.Service;
+using OnlineCasinoBack.Services;
+using System.Text;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// ?? Controllers + JSON camelCase ?????????????????????????????????????????????
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNamingPolicy =
+            System.Text.Json.JsonNamingPolicy.CamelCase;
+    });
+
+// ?? Swagger with JWT lock ????????????????????????????????????????????????????
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "OnlineCasino API", Version = "v1" });
+
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "Paste your JWT token here (without Bearer prefix)"
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id   = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
+
+// ?? Database ?????????????????????????????????????????????????????????????????
+builder.Services.AddDbContext<DataContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// ?? CORS ?????????????????????????????????????????????????????????????????????
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173", "http://localhost:3000")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
+// ?? JWT Authentication ????????????????????????????????????????????????????????
+var jwtKey = builder.Configuration["Jwt:Key"]!;
+var jwtIssuer = builder.Configuration["Jwt:Issuer"]!;
+var jwtAud = builder.Configuration["Jwt:Audience"]!;
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = jwtIssuer,
+        ValidAudience = jwtAud,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
+    };
+});
+
+builder.Services.AddAuthorization();
+
+// ?? Services ??????????????????????????????????????????????????????????????????
+builder.Services.AddScoped<EmailSender>();
+builder.Services.AddScoped<DatabaseSeedingService>();
+builder.Services.AddScoped<SlotService>();
+builder.Services.AddSingleton<ISlotEngine, Slot1Engine>();
+builder.Services.AddSingleton<SlotEngineRegistry>();
+
+var app = builder.Build();
+
+// ?? Seeding ???????????????????????????????????????????????????????????????????
+using (var scope = app.Services.CreateScope())
+{
+    var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
+    try
+    {
+        var seeder = scope.ServiceProvider.GetRequiredService<DatabaseSeedingService>();
+        await seeder.SeedAsync();
+    }
+    catch (Exception ex)
+    {
+        logger.LogError(ex, "Database seeding failed.");
+    }
+}
+
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "OnlineCasino API v1");
+    c.RoutePrefix = string.Empty;
+});
+
+app.UseHttpsRedirection();
+app.UseCors("AllowFrontend");
+app.UseAuthentication();
+app.UseAuthorization();
+app.MapControllers();
+app.Run();

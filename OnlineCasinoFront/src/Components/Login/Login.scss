@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&display=swap");
+
+$grad-bg: linear-gradient(105deg, #000000 0%, #020b1a 45%, #041530 70%, #000d20 100%);
+$gold: #c9a84c;
+$gold-bright: #f0c96a;
+$gold-dim: #7a5e20;
+$text-primary: #e8dfc8;
+$text-muted: #7a8fa8;
+$border-subtle: rgba(201, 168, 76, 0.15);
+$border-input: rgba(201, 168, 76, 0.2);
+$input-bg: rgba(255, 255, 255, 0.03);
+$error-color: #e05252;
+
+.auth-page {
+  min-height: 100vh;
+  width: 100%;
+  background: $grad-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  box-sizing: border-box;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.006) 2px,
+      rgba(255, 255, 255, 0.006) 4px
+    );
+    pointer-events: none;
+  }
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+  background: linear-gradient(160deg, rgba(4, 21, 48, 0.95) 0%, rgba(2, 11, 26, 0.98) 100%);
+  border: 1px solid $border-subtle;
+  border-radius: 16px;
+  padding: 0 0 32px;
+  box-shadow:
+    0 0 0 1px rgba(201, 168, 76, 0.06),
+    0 24px 64px rgba(0, 0, 0, 0.7),
+    0 0 80px rgba(26, 111, 212, 0.06);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      $gold-dim 20%,
+      $gold 50%,
+      $gold-dim 80%,
+      transparent 100%
+    );
+    opacity: 0.7;
+  }
+}
+
+.auth-card__tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  border-bottom: 1px solid $border-subtle;
+  margin-bottom: 28px;
+}
+
+.auth-card__tab {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $text-muted;
+  background: transparent;
+  border: none;
+  padding: 18px 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: color 0.25s ease;
+
+  &--active {
+    color: $gold-bright;
+  }
+
+  &:hover:not(.auth-card__tab--active) {
+    color: $text-primary;
+  }
+}
+
+.auth-card__tab-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, $gold-dim, $gold-bright, $gold-dim);
+  border-radius: 2px 2px 0 0;
+  box-shadow: 0 0 10px rgba(201, 168, 76, 0.5);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.auth-card__header {
+  padding: 0 32px 24px;
+}
+
+.auth-card__title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 32px;
+  letter-spacing: 0.05em;
+  color: $gold-bright;
+  margin: 0 0 6px;
+  text-shadow: 0 0 20px rgba(201, 168, 76, 0.3);
+}
+
+.auth-card__subtitle {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: $text-muted;
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+
+.auth-card__form {
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  position: relative;
+
+  &--split {
+    flex-direction: row;
+    gap: 12px;
+  }
+}
+
+.auth-field__half {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.auth-field__label {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $text-muted;
+}
+
+.auth-field__input {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: $text-primary;
+  background: $input-bg;
+  border: 1px solid $border-input;
+  border-radius: 8px;
+  padding: 11px 14px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+
+  &::placeholder {
+    color: rgba(122, 143, 168, 0.5);
+  }
+
+  &:focus {
+    border-color: $gold;
+    background: rgba(201, 168, 76, 0.04);
+    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1), 0 0 16px rgba(201, 168, 76, 0.08);
+  }
+}
+
+.auth-field__password-wrap {
+  position: relative;
+
+  .auth-field__input {
+    padding-right: 44px;
+  }
+}
+
+.auth-field__eye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: $text-muted;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: color 0.2s ease;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover {
+    color: $gold;
+  }
+}
+
+.auth-field__hint {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(122, 143, 168, 0.6);
+  letter-spacing: 0.02em;
+}
+
+.auth-card__forgot {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -6px;
+}
+
+.auth-card__forgot-link {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: $text-muted;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $gold;
+  }
+}
+
+.auth-card__error {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: $error-color;
+  background: rgba(224, 82, 82, 0.08);
+  border: 1px solid rgba(224, 82, 82, 0.2);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+
+.auth-card__submit {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #000;
+  background: linear-gradient(135deg, $gold 0%, $gold-bright 50%, $gold 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  cursor: pointer;
+  transition: background-position 0.4s ease, box-shadow 0.25s ease, transform 0.15s ease;
+  margin-top: 4px;
+  box-shadow: 0 4px 20px rgba(201, 168, 76, 0.25);
+
+  &:hover:not(:disabled) {
+    background-position: 0% 0;
+    box-shadow: 0 4px 28px rgba(201, 168, 76, 0.45), 0 0 48px rgba(201, 168, 76, 0.15);
+    transform: translateY(-1px);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 12px rgba(201, 168, 76, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.auth-card__switch {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: $text-muted;
+  text-align: center;
+  margin: 20px 0 0;
+  padding: 0 32px;
+  letter-spacing: 0.03em;
+}
+
+.auth-card__switch-btn {
+  background: transparent;
+  border: none;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: $gold;
+  cursor: pointer;
+  padding: 0 0 0 6px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(201, 168, 76, 0.4);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+
+  &:hover {
+    color: $gold-bright;
+    text-decoration-color: $gold-bright;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    border-radius: 12px;
+  }
+
+  .auth-card__header {
+    padding: 0 20px 20px;
+  }
+
+  .auth-card__form {
+    padding: 0 20px;
+  }
+
+  .auth-card__switch {
+    padding: 0 20px;
+  }
+
+  .auth-card__title {
+    font-size: 26px;
+  }
+
+  .auth-field--split {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+.auth-card__success {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4caf82;
+  background: rgba(76, 175, 130, 0.08);
+  border: 1px solid rgba(76, 175, 130, 0.2);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin: 0;
+  letter-spacing: 0.03em;
+}
